@@ -5,9 +5,26 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Governança Comercial</title>
 <style>
-:root{--navy:#071b3b;--blue:#1769e0;--bg:#f4f7fb;--text:#10223e;--muted:#738096;--line:#e4eaf2;--green:#168a4c;--orange:#d98a00;--red:#cf3b3b}
-*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}button,input,select,textarea{font:inherit}.app{display:flex;min-height:100vh}.side{width:245px;background:linear-gradient(180deg,#06172f,#09254b);color:#fff;padding:22px 14px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}.brand{font-size:21px;font-weight:800;margin:6px 10px 28px}.brand span{color:#4d91ff}.nav{display:flex;flex-direction:column;gap:7px}.nav button{border:0;background:transparent;color:#c8d3e4;text-align:left;padding:12px 14px;border-radius:10px;font-weight:600;cursor:pointer}.nav button:hover,.nav button.active{background:linear-gradient(90deg,#1c65d8,#237cf3);color:white}.sidefoot{margin-top:auto;color:#91a1b8;font-size:11px;padding:12px}.main{flex:1;padding:26px 28px;min-width:0}.top{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:20px}.top h1{margin:0;font-size:27px}.top p{margin:5px 0 0;color:var(--muted)}.filters{display:flex;gap:8px}.filters select{background:#fff;border:1px solid #d8e0eb;border-radius:10px;padding:10px 12px}.page{display:none}.page.active{display:block}.grid6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-bottom:16px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:17px;box-shadow:0 3px 12px rgba(14,35,67,.045)}.kpi{position:relative;overflow:hidden}.kpi:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:#2d7df0}.kpi:nth-child(2):before{background:#22a060}.kpi:nth-child(3):before{background:#f0aa12}.kpi:nth-child(4):before{background:#e24a4a}.kpi:nth-child(5):before{background:#7354dc}.kpi:nth-child(6):before{background:#198c79}.kpi span{font-size:10px;color:#7b889b;text-transform:uppercase;font-weight:700}.kpi b{display:block;font-size:22px;margin-top:7px;color:#0b2448}.title{font-size:15px;font-weight:800;margin-bottom:14px}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.funnel div{padding:14px;border-radius:11px;background:#edf4ff}.funnel .strong{background:#fff5dc}.funnel .commit,.funnel .won{background:#e9f8ef}.funnel span{font-size:10px;color:#6f7e93}.funnel b{display:block;margin-top:5px}.diag{padding:16px;border-radius:11px;background:#e9f8ef;color:#176c3d}.diag.warn{background:#fff4da;color:#805c00}.diag.bad{background:#fdeaea;color:#9d2929}.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}.mini div{background:#f7f9fc;border-radius:9px;padding:11px}.mini span{font-size:10px;color:#7a8799}.mini b{display:block;margin-top:4px}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:10px 7px;border-bottom:1px solid #edf1f6;text-align:left}th{font-size:10px;text-transform:uppercase;color:#728095}.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:10px;font-weight:700}.Pipeline,.progress{background:#eaf2ff;color:#1e5cad}.Strong,.pending{background:#fff2cf;color:#805f00}.Commit,.done{background:#e7f7ed;color:#217348}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.formgrid label,.full{display:flex;flex-direction:column;gap:6px;font-size:12px;color:#66758b;font-weight:700}.formgrid input,.formgrid select,textarea{padding:10px;border:1px solid #d6deea;border-radius:9px;color:#10223e}.full{margin-top:12px}textarea{min-height:75px}.preview{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}.preview div{background:#f7f9fc;border:1px solid #e5eaf1;border-radius:10px;padding:12px}.preview span{font-size:10px;color:#778498}.preview b{display:block;margin-top:4px}.actions{display:flex;justify-content:flex-end;gap:8px;margin-top:15px}.primary,.secondary{border:0;border-radius:9px;padding:10px 14px;font-weight:700;cursor:pointer}.primary{background:#1769e0;color:#fff}.secondary{background:#edf1f6;color:#263958}.sectionhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.sectionhead h2{margin:0}.sectionhead p{margin:4px 0 0;color:#748196}.history{display:flex;flex-direction:column;gap:10px}.history .row{display:grid;grid-template-columns:90px repeat(4,1fr) 2fr;gap:10px;border:1px solid #e4eaf2;border-radius:10px;padding:12px}.history span{font-size:10px;color:#748196}.history b{display:block;margin-top:4px}.notice{background:#eef5ff;border:1px solid #d9e8ff;color:#2a5b9f;padding:11px 13px;border-radius:10px;font-size:12px;margin-bottom:16px}.toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.toolbar small{color:#7a8798}
-@media(max-width:1100px){.grid6{grid-template-columns:repeat(3,1fr)}.grid2{grid-template-columns:1fr}.side{width:205px}}@media(max-width:700px){.app{display:block}.side{width:100%;height:auto;position:static}.nav{flex-direction:row;overflow:auto}.sidefoot{display:none}.main{padding:16px}.top{flex-direction:column}.grid6,.formgrid,.preview{grid-template-columns:1fr 1fr}.history .row{grid-template-columns:1fr 1fr}}
+:root{--navy:#071b3b;--navy2:#0b2a55;--blue:#1769e0;--bg:#f4f7fb;--text:#10223e;--muted:#738096;--line:#e4eaf2;--green:#168a4c;--orange:#d98a00;--red:#cf3b3b;--purple:#7257d8}
+*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}button,input,select,textarea{font:inherit}
+.app{display:flex;min-height:100vh}.side{width:260px;background:linear-gradient(180deg,#06172f,#0a2d59);color:#fff;padding:22px 14px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
+.brand{font-size:20px;font-weight:800;margin:6px 10px 25px}.brand span{color:#4d91ff}.nav{display:flex;flex-direction:column;gap:6px}
+.nav button{border:0;background:transparent;color:#c8d3e4;text-align:left;padding:11px 13px;border-radius:10px;font-weight:600;cursor:pointer}.nav button:hover,.nav button.active{background:linear-gradient(90deg,#1c65d8,#237cf3);color:#fff}
+.sidefoot{margin-top:auto;color:#91a1b8;font-size:11px;padding:12px}.main{flex:1;padding:26px 28px;min-width:0}
+.top{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:20px}.top h1{margin:0;font-size:27px}.top p{margin:5px 0 0;color:var(--muted)}
+.filters{display:flex;gap:8px;flex-wrap:wrap}.filters select,.filters input{background:#fff;border:1px solid #d8e0eb;border-radius:10px;padding:10px 12px}.page{display:none}.page.active{display:block}
+.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:17px;box-shadow:0 3px 12px rgba(14,35,67,.045)}.grid6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-bottom:16px}.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.kpi{position:relative;overflow:hidden}.kpi:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:#2d7df0}.kpi.green:before{background:#22a060}.kpi.orange:before{background:#f0aa12}.kpi.red:before{background:#e24a4a}.kpi.purple:before{background:#7354dc}
+.kpi span{font-size:10px;color:#7b889b;text-transform:uppercase;font-weight:700}.kpi b{display:block;font-size:22px;margin-top:7px;color:#0b2448}
+.title{font-size:15px;font-weight:800;margin-bottom:14px}.sectionhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.sectionhead h2{margin:0}.sectionhead p{margin:4px 0 0;color:#748196}
+table{width:100%;border-collapse:collapse;font-size:12px}th,td{padding:10px 7px;border-bottom:1px solid #edf1f6;text-align:left;vertical-align:top}th{font-size:10px;text-transform:uppercase;color:#728095;background:#fafbfd}.scroll{overflow:auto}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:10px;font-weight:700}.blue{background:#eaf2ff;color:#1e5cad}.yellow{background:#fff2cf;color:#805f00}.greenbadge{background:#e7f7ed;color:#217348}.redbadge{background:#fdeaea;color:#9d2929}
+.notice{background:#eef5ff;border:1px solid #d9e8ff;color:#2a5b9f;padding:11px 13px;border-radius:10px;font-size:12px;margin-bottom:16px}
+.chartbox{height:310px;position:relative}.chartbox canvas{width:100%;height:100%}.legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:11px;color:#65748b}.legend i{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:5px}
+.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.formgrid label,.full{display:flex;flex-direction:column;gap:6px;font-size:12px;color:#66758b;font-weight:700}.formgrid input,.formgrid select,textarea{padding:10px;border:1px solid #d6deea;border-radius:9px;color:#10223e}.full{margin-top:12px}textarea{min-height:75px}.primary,.secondary{border:0;border-radius:9px;padding:10px 14px;font-weight:700;cursor:pointer}.primary{background:#1769e0;color:#fff}.secondary{background:#edf1f6;color:#263958}.actions{display:flex;justify-content:flex-end;gap:8px;margin-top:15px}
+.param-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.param-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px}.param-card h3{margin:0 0 12px;font-size:14px}.param-row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #eef2f6}.param-row:last-child{border-bottom:0}.param-row span{color:#66758b;font-size:12px}.param-row b{font-size:12px}
+.glossary td:first-child{font-weight:700;min-width:190px}.tech{font-family:Consolas,monospace;font-size:12px}.muted{color:#778498}.strong{font-weight:700}
+@media(max-width:1150px){.grid6{grid-template-columns:repeat(3,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}.grid2,.param-grid{grid-template-columns:1fr}.side{width:220px}}@media(max-width:720px){.app{display:block}.side{width:100%;height:auto;position:static}.nav{flex-direction:row;overflow:auto}.sidefoot{display:none}.main{padding:16px}.top{flex-direction:column}.grid6,.grid4,.formgrid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -15,71 +32,166 @@
 <aside class="side">
   <div class="brand">GOVERNANÇA <span>COMERCIAL</span></div>
   <div class="nav">
-    <button class="active" data-p="dash">Visão Geral</button>
-    <button data-p="reuniao">Nova Reunião</button>
-    <button data-p="opps">Oportunidades</button>
-    <button data-p="acoes">Plano de Ação</button>
-    <button data-p="hist">Histórico</button>
+    <button class="active" data-p="dashboard">Visão Gerencial</button>
+    <button data-p="gestao">Gestão Comercial</button>
+    <button data-p="plano">Plano de Ação</button>
+    <button data-p="metas">Metas</button>
+    <button data-p="ticket">Ticket Médio</button>
+    <button data-p="param">Parâmetros</button>
+    <button data-p="glossario">Glossário</button>
+    <button data-p="tec">Configurações</button>
   </div>
-  <div class="sidefoot">Protótipo • dados locais do navegador</div>
+  <div class="sidefoot">Protótipo baseado na planilha IT-One</div>
 </aside>
+
 <main class="main">
-  <div class="top">
-    <div><h1 id="ptitle">Governança Comercial</h1><p id="psub">Performance, forecast e plano de ação</p></div>
-    <div class="filters"><select><option>Eduardo Alves</option></select><select><option>Agosto/2026</option></select></div>
+<div class="top">
+  <div><h1 id="ptitle">Visão Gerencial</h1><p id="psub">Acompanhamento consolidado da governança comercial</p></div>
+  <div class="filters"><select><option>Eduardo Caliman</option><option>Felipe Laranjeira</option><option>Rosana Machado</option><option>Tamiris Soares</option></select><select><option>Agosto/2026</option></select></div>
+</div>
+
+<section id="dashboard" class="page active">
+  <div class="notice">Protótipo navegável: estrutura replicada das abas da planilha original. Os cálculos ainda usam dados demonstrativos até a conexão com o Google Sheets.</div>
+  <div class="grid6">
+    <div class="card kpi"><span>Meta acum. ano</span><b>R$ 1,33 mi</b></div>
+    <div class="card kpi green"><span>Ganhas acum. ano</span><b>R$ 820 mil</b></div>
+    <div class="card kpi orange"><span>Atingimento YTD</span><b>62%</b></div>
+    <div class="card kpi red"><span>Falta p/ meta mês</span><b>R$ 180 mil</b></div>
+    <div class="card kpi purple"><span>Funil ponderado</span><b>R$ 365 mil</b></div>
+    <div class="card kpi green"><span>Funil ÷ Falta</span><b>4,2x</b></div>
   </div>
-
-  <section id="dash" class="page active">
-    <div class="notice">Esta versão é um protótipo funcional. Os dados permanecem apenas neste navegador até conectarmos ao Google Sheets.</div>
-    <div class="grid6">
-      <div class="card kpi"><span>Meta do mês</span><b id="meta">R$ 500 mil</b></div>
-      <div class="card kpi"><span>Won (vendido)</span><b id="won">—</b></div>
-      <div class="card kpi"><span>Atingimento</span><b id="ating">—</b></div>
-      <div class="card kpi"><span>Gap</span><b id="gap">—</b></div>
-      <div class="card kpi"><span>Forecast ponderado</span><b id="forecast">—</b></div>
-      <div class="card kpi"><span>Cobertura do funil</span><b id="cover">—</b></div>
+  <div class="grid2">
+    <div class="card">
+      <div class="title">Evolução Comercial — Acumulado no Ano</div>
+      <div class="chartbox"><canvas id="lineChart"></canvas></div>
+      <div class="legend"><span><i style="background:#1769e0"></i>Meta acumulada</span><span><i style="background:#22a060"></i>Ganhas acumuladas</span><span><i style="background:#7354dc"></i>Previsão anual</span></div>
     </div>
-    <div class="grid2">
-      <div class="card"><div class="title">Funil atual</div><div class="funnel"><div><span>Pipeline</span><b id="fp">—</b></div><div class="strong"><span>Strong</span><b id="fs">—</b></div><div class="commit"><span>Commit</span><b id="fc">—</b></div><div class="won"><span>Won</span><b id="fw">—</b></div></div></div>
-      <div class="card"><div class="title">Diagnóstico comercial</div><div id="diag" class="diag"><b id="dstatus">—</b><div id="dtext" style="margin-top:5px;font-size:12px"></div></div><div class="mini"><div><span>Ações pendentes</span><b id="pend">0</b></div><div><span>Oportunidades abertas</span><b id="open">0</b></div><div><span>Última reunião</span><b id="lastdate">—</b></div></div></div>
+    <div class="card">
+      <div class="title">Visão da Equipe</div>
+      <div class="scroll"><table><thead><tr><th>Executivo</th><th>Meta YTD</th><th>Won YTD</th><th>Ating.</th><th>Gap mês</th><th>Cobertura</th></tr></thead>
+      <tbody>
+        <tr><td>Eduardo Caliman</td><td>R$ 1,33 mi</td><td>R$ 820 mil</td><td>62%</td><td>R$ 180 mil</td><td><span class="badge greenbadge">4,2x</span></td></tr>
+        <tr><td>Felipe Laranjeira</td><td>R$ 1,33 mi</td><td>R$ 960 mil</td><td>72%</td><td>R$ 110 mil</td><td><span class="badge greenbadge">3,8x</span></td></tr>
+        <tr><td>Rosana Machado</td><td>R$ 1,33 mi</td><td>R$ 710 mil</td><td>53%</td><td>R$ 240 mil</td><td><span class="badge yellow">2,4x</span></td></tr>
+        <tr><td>Tamiris Soares</td><td>R$ 667 mil</td><td>R$ 390 mil</td><td>58%</td><td>R$ 95 mil</td><td><span class="badge yellow">2,8x</span></td></tr>
+      </tbody></table></div>
     </div>
-    <div class="grid2">
-      <div class="card"><div class="toolbar"><div class="title" style="margin:0">Top oportunidades</div><small>Funil aberto</small></div><table><thead><tr><th>Cliente</th><th>Fase</th><th>Valor</th><th>Fechamento</th></tr></thead><tbody id="topopps"></tbody></table></div>
-      <div class="card"><div class="toolbar"><div class="title" style="margin:0">Plano de ação</div><small>Últimas ações</small></div><table><thead><tr><th>Ação</th><th>Prazo</th><th>Status</th></tr></thead><tbody id="topactions"></tbody></table></div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <section id="reuniao" class="page">
-    <div class="card"><div class="title">Nova reunião de gestão</div><div class="formgrid">
-      <label>Data<input id="rdate" type="date"></label><label>Competência<input id="rcomp" value="08/2026"></label>
-      <label>Meta<input id="rmeta" type="number" value="500000"></label><label>Won<input id="rwon" type="number" value="320000"></label>
-      <label>Pipeline<input id="rp" type="number" value="300000"></label><label>Strong<input id="rs" type="number" value="250000"></label>
-      <label>Commit<input id="rc" type="number" value="200000"></label><label>Prospects realizados<input id="rprospects" type="number" value="31"></label>
-    </div><label class="full">Risco principal<textarea id="rrisk">Gap de R$ 180 mil para meta.</textarea></label><label class="full">Resumo da reunião<textarea id="rsummary">Foco em fechamento das oportunidades em Commit e Strong.</textarea></label><div class="preview"><div><span>Atingimento</span><b id="pating">—</b></div><div><span>Gap</span><b id="pgap">—</b></div><div><span>Forecast ponderado</span><b id="pforecast">—</b></div><div><span>Cobertura</span><b id="pcover">—</b></div></div><div class="actions"><button class="primary" id="saveMeetingBtn">Salvar reunião</button></div></div>
-  </section>
+<section id="gestao" class="page">
+  <div class="sectionhead"><div><h2>Gestão Comercial</h2><p>Replica a lógica da aba “Gestao”: metas, Won, forecast, cobertura e atividade.</p></div><button class="primary" onclick="alert('Na versão conectada, este botão abrirá o formulário de atualização do mês.')">Atualizar mês</button></div>
+  <div class="grid4">
+    <div class="card kpi"><span>Meta Oficial</span><b>R$ 166,7 mil</b></div>
+    <div class="card kpi green"><span>Ganhas (Won)</span><b>R$ 92 mil</b></div>
+    <div class="card kpi purple"><span>Meta Coberta</span><b>R$ 274,5 mil</b></div>
+    <div class="card kpi red"><span>Falta p/ Meta</span><b>R$ 0</b></div>
+  </div>
+  <div class="card scroll"><table><thead><tr><th>Mês</th><th>Meta Oficial</th><th>Won R$</th><th>Won qtd</th><th>Pipeline</th><th>Strong</th><th>Commit</th><th>Funil Aberto</th><th>Funil Ponderado</th><th>Meta Coberta</th><th>Forecast Declarado</th><th>Acerto Forecast</th><th>Consistência</th></tr></thead>
+  <tbody id="gestaoRows"></tbody></table></div>
+</section>
 
-  <section id="opps" class="page"><div class="sectionhead"><div><h2>Oportunidades</h2><p>Controle do funil por oportunidade.</p></div><button class="primary" id="addOppBtn">+ Nova oportunidade</button></div><div class="card"><table><thead><tr><th>Cliente</th><th>Oportunidade</th><th>Fase</th><th>Valor</th><th>Fechamento</th><th>Status</th></tr></thead><tbody id="oppstable"></tbody></table></div></section>
+<section id="plano" class="page">
+  <div class="sectionhead"><div><h2>Plano de Ação</h2><p>Plano financeiro M+3, volumes necessários e execução do mês.</p></div><button class="primary" onclick="addPlan()">+ Registrar compromisso</button></div>
+  <div class="grid4">
+    <div class="card kpi"><span>Meta Oficial M+3</span><b>R$ 166,7 mil</b></div>
+    <div class="card kpi red"><span>Necessidade Total M+3</span><b>R$ 210 mil</b></div>
+    <div class="card kpi purple"><span>Receita Nova Necessária</span><b>R$ 350 mil</b></div>
+    <div class="card kpi green"><span>Acionamento</span><b>Plano acionado</b></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><div class="title">Volumes Necessários</div><table><tbody><tr><td>Vendas Necessárias</td><td class="strong">3</td></tr><tr><td>Oportunidades Qualificadas Necessárias</td><td class="strong">15</td></tr><tr><td>Prospects Distintos Necessários</td><td class="strong">75</td></tr><tr><td>Receita Esperada M+2</td><td>R$ 70 mil</td></tr><tr><td>Receita Esperada M+3</td><td>R$ 210 mil</td></tr><tr><td>Receita Esperada M+4</td><td>R$ 70 mil</td></tr></tbody></table></div>
+    <div class="card"><div class="title">Execução do Mês</div><table><thead><tr><th>Indicador</th><th>Recomendado</th><th>Pactuado</th><th>Realizado</th><th>Ating.</th></tr></thead><tbody><tr><td>Prospects</td><td>75</td><td>70</td><td>52</td><td>74%</td></tr><tr><td>Oportunidades</td><td>15</td><td>14</td><td>10</td><td>71%</td></tr></tbody></table></div>
+  </div>
+  <div class="card scroll"><table><thead><tr><th>Executivo</th><th>Mês</th><th>Compromisso Prospects</th><th>Realizado Prospects</th><th>Compromisso Oportunidades</th><th>Geradas</th><th>Consistência</th></tr></thead><tbody id="planRows"><tr><td>Eduardo Caliman</td><td>Agosto</td><td>70</td><td>52</td><td>14</td><td>10</td><td><span class="badge greenbadge">OK</span></td></tr></tbody></table></div>
+</section>
 
-  <section id="acoes" class="page"><div class="sectionhead"><div><h2>Plano de Ação</h2><p>Compromissos e prazos assumidos nas reuniões.</p></div><button class="primary" id="addActionBtn">+ Nova ação</button></div><div class="card"><table><thead><tr><th>Ação</th><th>Responsável</th><th>Prazo</th><th>Impacto</th><th>Status</th><th></th></tr></thead><tbody id="actionstable"></tbody></table></div></section>
+<section id="metas" class="page">
+  <div class="sectionhead"><div><h2>Metas — Planejamento Anual</h2><p>Ano de referência 2026 • Gerente Comercial: Fernando Elias</p></div><button class="primary" onclick="alert('No backend, esta ação gravará as metas no Google Sheets.')">Salvar metas</button></div>
+  <div class="card scroll"><table><thead><tr><th>ID</th><th>Executivo</th><th>Mês inicial</th><th>Mês final</th><th>Meta exercício</th><th>% T1</th><th>% T2</th><th>% T3</th><th>% T4</th><th>Contas carteira</th><th>Validação</th></tr></thead>
+  <tbody>
+    <tr><td>EXE-01</td><td>Eduardo Caliman</td><td>1</td><td>12</td><td>R$ 2.000.000</td><td>25%</td><td>25%</td><td>25%</td><td>25%</td><td>100</td><td><span class="badge greenbadge">OK</span></td></tr>
+    <tr><td>EXE-02</td><td>Felipe Laranjeira</td><td>1</td><td>12</td><td>R$ 2.000.000</td><td>25%</td><td>25%</td><td>25%</td><td>25%</td><td>100</td><td><span class="badge greenbadge">OK</span></td></tr>
+    <tr><td>EXE-03</td><td>Rosana Machado</td><td>1</td><td>12</td><td>R$ 2.000.000</td><td>25%</td><td>25%</td><td>25%</td><td>25%</td><td>100</td><td><span class="badge greenbadge">OK</span></td></tr>
+    <tr><td>EXE-04</td><td>Tamiris Soares</td><td>1</td><td>12</td><td>R$ 1.000.000</td><td>25%</td><td>25%</td><td>25%</td><td>25%</td><td>100</td><td><span class="badge greenbadge">OK</span></td></tr>
+  </tbody></table></div>
+</section>
 
-  <section id="hist" class="page"><div class="card"><div class="title">Evolução por reunião</div><div class="history" id="history"></div></div></section>
+<section id="ticket" class="page">
+  <div class="sectionhead"><div><h2>Ticket Médio e Vendas Necessárias</h2><p>Cadastro de linhas de negócio e composição do ticket planejado.</p></div><button class="primary" onclick="addTicket()">+ Nova linha</button></div>
+  <div class="grid4"><div class="card kpi"><span>Serviços</span><b>R$ 100 mil</b></div><div class="card kpi"><span>Cloud</span><b>R$ 25 mil</b></div><div class="card kpi"><span>No Core</span><b>R$ 35 mil</b></div><div class="card kpi"><span>Core</span><b>R$ 70 mil</b></div></div>
+  <div class="card scroll"><table><thead><tr><th>ID</th><th>Linha de Negócio</th><th>Ticket Médio</th><th>Validação</th></tr></thead><tbody id="ticketRows"><tr><td>LIN-01</td><td>Serviços</td><td>R$ 100.000</td><td><span class="badge greenbadge">OK</span></td></tr><tr><td>LIN-02</td><td>Cloud</td><td>R$ 25.000</td><td><span class="badge greenbadge">OK</span></td></tr><tr><td>LIN-03</td><td>No Core</td><td>R$ 35.000</td><td><span class="badge greenbadge">OK</span></td></tr><tr><td>LIN-04</td><td>Core</td><td>R$ 70.000</td><td><span class="badge greenbadge">OK</span></td></tr></tbody></table></div>
+</section>
+
+<section id="param" class="page">
+  <div class="sectionhead"><div><h2>Parâmetros Comerciais</h2><p>Taxas operacionais, pesos de forecast, ciclo comercial e piso de prospecção.</p></div><button class="primary" onclick="alert('Parâmetros serão editáveis após conectar ao Google Sheets.')">Editar parâmetros</button></div>
+  <div class="param-grid">
+    <div class="param-card"><h3>Taxas Operacionais</h3><div class="param-row"><span>Prospecção → Qualificação</span><b>20%</b></div><div class="param-row"><span>Qualificação → Won</span><b>20%</b></div><div class="param-row"><span>Perfil ativo</span><b>End-to-End</b></div></div>
+    <div class="param-card"><h3>Status de Forecast</h3><div class="param-row"><span>Pipeline</span><b>20%</b></div><div class="param-row"><span>Strong</span><b>50%</b></div><div class="param-row"><span>Commit</span><b>90%</b></div></div>
+    <div class="param-card"><h3>Ciclo Comercial</h3><div class="param-row"><span>M+2</span><b>20%</b></div><div class="param-row"><span>M+3</span><b>60%</b></div><div class="param-row"><span>M+4</span><b>20%</b></div></div>
+    <div class="param-card"><h3>Mínimo de Prospecção</h3><div class="param-row"><span>Aplicar piso</span><b>Sim</b></div><div class="param-row"><span>Fator mínimo</span><b>100%</b></div></div>
+  </div>
+</section>
+
+<section id="glossario" class="page">
+  <div class="sectionhead"><div><h2>Glossário de Termos</h2><p>Definições usadas no modelo comercial.</p></div></div>
+  <div class="card scroll"><table class="glossary"><thead><tr><th>Termo no painel</th><th>Termo antigo</th><th>Definição</th><th>Onde aparece</th></tr></thead><tbody>
+    <tr><td>Funil em Aberto (R$)</td><td>Backlog Bruto</td><td>Pipeline + Strong + Commit, sem ponderação.</td><td>Gestão, Dashboard</td></tr>
+    <tr><td>Funil Ponderado (R$)</td><td>Backlog Ajustado</td><td>Funil multiplicado pelos pesos de cada status.</td><td>Gestão, Dashboard</td></tr>
+    <tr><td>Meta Coberta (R$)</td><td>Cobertura Ajustada</td><td>Ganhas (Won) + Funil Ponderado.</td><td>Gestão</td></tr>
+    <tr><td>Vendas Necessárias no Mês</td><td>Cota Técnica</td><td>Meta do mês ÷ Ticket Médio Planejado.</td><td>Gestão, Ticket</td></tr>
+    <tr><td>Falta p/ Meta (R$)</td><td>Gap Oficial</td><td>MAX(0; Meta − Meta Coberta).</td><td>Gestão, Dashboard</td></tr>
+    <tr><td>Funil ÷ Falta (x)</td><td>Múltiplo de Cobertura</td><td>Quantas vezes o Funil em Aberto cobre o que falta vender. Referência saudável ≥ 3x.</td><td>Gestão, Dashboard</td></tr>
+    <tr><td>Pipeline / Strong / Commit</td><td>—</td><td>Forecast ponderado em 20% / 50% / 90%.</td><td>Gestão, Param</td></tr>
+    <tr><td>Acerto da Previsão (%)</td><td>Realização do Forecast</td><td>Ganhas ÷ Previsão Declarada.</td><td>Gestão, Dashboard</td></tr>
+    <tr><td>Win Rate</td><td>—</td><td>% de oportunidades qualificadas que viram venda.</td><td>Param, Gestão</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="tec" class="page">
+  <div class="sectionhead"><div><h2>Configurações Técnicas</h2><p>Equivalente à aba _TEC. Área de suporte ao modelo, não destinada à rotina do usuário.</p></div></div>
+  <div class="card scroll"><table class="tech"><thead><tr><th>Mês n</th><th>Peso</th><th>Nome do mês</th><th>Sim/Não</th></tr></thead><tbody id="tecRows"></tbody></table></div>
+</section>
 </main>
 </div>
+
 <script>
 const $=id=>document.getElementById(id);
-const INIT={meetings:[{date:'05/08/2026',pipeline:700000,strong:220000,commit:90000,won:180000,summary:'Revisão de carteira e avanço em Cloud.'},{date:'12/08/2026',pipeline:760000,strong:260000,commit:120000,won:210000,summary:'Aumento de oportunidades qualificadas.'},{date:'19/08/2026',pipeline:800000,strong:300000,commit:150000,won:260000,summary:'Commit evoluiu e primeiro fechamento ocorreu.'},{date:'26/08/2026',pipeline:300000,strong:250000,commit:200000,won:320000,summary:'Foco em fechamento e gap de R$ 180 mil.'}],opps:[{client:'Cliente A',name:'Projeto XPTO',phase:'Commit',value:120000,close:'15/09/2026',status:'Aberta'},{client:'Cliente B',name:'Modernização TI',phase:'Strong',value:95000,close:'30/09/2026',status:'Aberta'},{client:'Cliente C',name:'Cloud Migration',phase:'Strong',value:80000,close:'20/09/2026',status:'Aberta'},{client:'Cliente D',name:'Suporte Premium',phase:'Pipeline',value:60000,close:'10/10/2026',status:'Aberta'}],actions:[{name:'Prospectar 15 contas',owner:'Eduardo Alves',deadline:'05/09/2026',impact:'M+3',status:'Em andamento'},{name:'Revisar oportunidades Strong',owner:'Eduardo Alves',deadline:'30/08/2026',impact:'R$ 180 mil',status:'Pendente'},{name:'Reunião cliente XPTO',owner:'Eduardo Alves',deadline:'28/08/2026',impact:'R$ 90 mil',status:'Concluído'}]};
-let data;try{data=JSON.parse(localStorage.getItem('govcom_proto_v2'))||JSON.parse(JSON.stringify(INIT))}catch(e){data=JSON.parse(JSON.stringify(INIT))}
-const META=500000;const money=v=>'R$ '+Math.round((Number(v)||0)/1000).toLocaleString('pt-BR')+' mil';const pct=v=>Math.round((Number(v)||0)*100)+'%';const persist=()=>localStorage.setItem('govcom_proto_v2',JSON.stringify(data));
-function calc(){const l=data.meetings[data.meetings.length-1];const gap=Math.max(META-l.won,0);const forecast=l.won+l.pipeline*.2+l.strong*.5+l.commit*.9;const cover=gap?((l.pipeline+l.strong+l.commit)/gap):9.9;return{l,gap,forecast,cover,ating:l.won/META}}
-function badge(s){const c=s==='Concluído'?'done':s==='Em andamento'?'progress':'pending';return `<span class="badge ${c}">${s}</span>`}
-function render(){const c=calc();$('won').textContent=money(c.l.won);$('ating').textContent=pct(c.ating);$('gap').textContent=money(c.gap);$('forecast').textContent=money(c.forecast);$('cover').textContent=c.cover.toFixed(1).replace('.',',')+'x';$('fp').textContent=money(c.l.pipeline);$('fs').textContent=money(c.l.strong);$('fc').textContent=money(c.l.commit);$('fw').textContent=money(c.l.won);$('pend').textContent=data.actions.filter(a=>a.status!=='Concluído').length;$('open').textContent=data.opps.filter(o=>o.status==='Aberta').length;$('lastdate').textContent=c.l.date;$('diag').className='diag '+(c.cover<2?'bad':c.cover<3?'warn':'');$('dstatus').textContent=c.cover<2?'CRÍTICO':c.cover<3?'ATENÇÃO':'SAUDÁVEL';$('dtext').textContent=c.cover<2?'Cobertura insuficiente para suportar o gap da meta.':c.cover<3?'Revisar oportunidades Strong e Commit.':'Cobertura suficiente para suportar a meta.';$('topopps').innerHTML=data.opps.slice(0,4).map(o=>`<tr><td>${o.client}</td><td><span class="badge ${o.phase}">${o.phase}</span></td><td>${money(o.value)}</td><td>${o.close}</td></tr>`).join('');$('topactions').innerHTML=data.actions.slice(0,4).map(a=>`<tr><td>${a.name}</td><td>${a.deadline}</td><td>${badge(a.status)}</td></tr>`).join('');$('oppstable').innerHTML=data.opps.map(o=>`<tr><td>${o.client}</td><td>${o.name}</td><td><span class="badge ${o.phase}">${o.phase}</span></td><td>${money(o.value)}</td><td>${o.close}</td><td>${o.status}</td></tr>`).join('');$('actionstable').innerHTML=data.actions.map((a,i)=>`<tr><td>${a.name}</td><td>${a.owner}</td><td>${a.deadline}</td><td>${a.impact}</td><td>${badge(a.status)}</td><td><button class="secondary" data-advance="${i}">Avançar</button></td></tr>`).join('');$('history').innerHTML=[...data.meetings].reverse().map(m=>`<div class="row"><div><span>Data</span><b>${m.date}</b></div><div><span>Pipeline</span><b>${money(m.pipeline)}</b></div><div><span>Strong</span><b>${money(m.strong)}</b></div><div><span>Commit</span><b>${money(m.commit)}</b></div><div><span>Won</span><b>${money(m.won)}</b></div><div><span>Resumo</span><b>${m.summary}</b></div></div>`).join('');document.querySelectorAll('[data-advance]').forEach(b=>b.onclick=()=>advance(Number(b.dataset.advance)));preview()}
-function preview(){const meta=Number($('rmeta').value)||0,won=Number($('rwon').value)||0,p=Number($('rp').value)||0,s=Number($('rs').value)||0,c=Number($('rc').value)||0;const gap=Math.max(meta-won,0),forecast=won+p*.2+s*.5+c*.9,cover=gap?(p+s+c)/gap:9.9;$('pating').textContent=meta?pct(won/meta):'0%';$('pgap').textContent=money(gap);$('pforecast').textContent=money(forecast);$('pcover').textContent=cover.toFixed(1).replace('.',',')+'x'}
-function brDate(v){if(!v)return new Date().toLocaleDateString('pt-BR');const [y,m,d]=v.split('-');return `${d}/${m}/${y}`}
-function openPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));$(id).classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.p===id));const map={dash:['Governança Comercial','Performance, forecast e plano de ação'],reuniao:['Nova Reunião','Registro do snapshot comercial'],opps:['Oportunidades','Controle detalhado do funil'],acoes:['Plano de Ação','Compromissos e prazos'],hist:['Histórico','Evolução por reunião']};$('ptitle').textContent=map[id][0];$('psub').textContent=map[id][1]}
-function saveMeeting(){data.meetings.push({date:brDate($('rdate').value),pipeline:Number($('rp').value)||0,strong:Number($('rs').value)||0,commit:Number($('rc').value)||0,won:Number($('rwon').value)||0,summary:$('rsummary').value||'Sem resumo.'});persist();render();openPage('dash');alert('Reunião salva no protótipo deste navegador.')}
-function addOpp(){const client=prompt('Cliente:');if(!client)return;const name=prompt('Oportunidade:')||'Nova oportunidade';let phase=prompt('Fase: Pipeline, Strong ou Commit','Pipeline')||'Pipeline';if(!['Pipeline','Strong','Commit'].includes(phase))phase='Pipeline';const value=Number(prompt('Valor (somente número):','50000'))||0;const close=prompt('Previsão de fechamento (dd/mm/aaaa):','30/09/2026')||'';data.opps.push({client,name,phase,value,close,status:'Aberta'});persist();render()}
-function addAction(){const name=prompt('Ação:');if(!name)return;const deadline=prompt('Prazo (dd/mm/aaaa):','05/09/2026')||'';const impact=prompt('Impacto esperado:','R$ 50 mil')||'-';data.actions.push({name,owner:'Eduardo Alves',deadline,impact,status:'Pendente'});persist();render()}
-function advance(i){const flow=['Pendente','Em andamento','Concluído'];const idx=flow.indexOf(data.actions[i].status);data.actions[i].status=flow[Math.min(Math.max(idx,0)+1,2)];persist();render()}
-document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>openPage(b.dataset.p));['rmeta','rwon','rp','rs','rc'].forEach(id=>$(id).addEventListener('input',preview));$('saveMeetingBtn').onclick=saveMeeting;$('addOppBtn').onclick=addOpp;$('addActionBtn').onclick=addAction;$('rdate').valueAsDate=new Date();render();
+const pageMap={dashboard:['Visão Gerencial','Acompanhamento consolidado da governança comercial'],gestao:['Gestão Comercial','Metas, Won, forecast, cobertura e atividade'],plano:['Plano de Ação','Plano financeiro M+3, volumes e execução'],metas:['Metas','Planejamento anual e sazonalidade'],ticket:['Ticket Médio','Linhas de negócio, ticket e vendas necessárias'],param:['Parâmetros','Regras e premissas comerciais'],glossario:['Glossário','Conceitos usados no modelo'],tec:['Configurações','Parâmetros técnicos de suporte']};
+document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));$(b.dataset.p).classList.add('active');document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x===b));$('ptitle').textContent=pageMap[b.dataset.p][0];$('psub').textContent=pageMap[b.dataset.p][1];if(b.dataset.p==='dashboard')drawChart()});
+
+const months=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+const meta=[166667,333334,500001,666668,833335,1000002,1166669,1333336,1500003,1666670,1833337,2000000];
+const won=[90000,180000,280000,390000,500000,620000,720000,820000,0,0,0,0];
+const prev=[90000,180000,280000,390000,500000,620000,720000,820000,1030000,1230000,1430000,1600000];
+
+function drawChart(){
+ const c=$('lineChart'),ctx=c.getContext('2d'),dpr=window.devicePixelRatio||1,rect=c.getBoundingClientRect();c.width=rect.width*dpr;c.height=rect.height*dpr;ctx.scale(dpr,dpr);
+ const W=rect.width,H=rect.height,p={l:55,r:18,t:18,b:38};ctx.clearRect(0,0,W,H);
+ const max=2100000;ctx.font='11px Segoe UI';ctx.fillStyle='#748196';ctx.strokeStyle='#e8edf4';ctx.lineWidth=1;
+ for(let i=0;i<=5;i++){let y=p.t+(H-p.t-p.b)*i/5;ctx.beginPath();ctx.moveTo(p.l,y);ctx.lineTo(W-p.r,y);ctx.stroke();let val=max*(1-i/5);ctx.fillText('R$ '+(val/1000000).toFixed(1).replace('.',',')+' mi',4,y+4)}
+ months.forEach((m,i)=>{let x=p.l+(W-p.l-p.r)*i/11;ctx.fillText(m,x-10,H-12)});
+ function line(arr,color){ctx.strokeStyle=color;ctx.lineWidth=2.5;ctx.beginPath();arr.forEach((v,i)=>{if(v===0)return;let x=p.l+(W-p.l-p.r)*i/11,y=p.t+(H-p.t-p.b)*(1-v/max);if(i===0||arr[i-1]===0)ctx.moveTo(x,y);else ctx.lineTo(x,y)});ctx.stroke();arr.forEach((v,i)=>{if(!v)return;let x=p.l+(W-p.l-p.r)*i/11,y=p.t+(H-p.t-p.b)*(1-v/max);ctx.fillStyle=color;ctx.beginPath();ctx.arc(x,y,3,0,Math.PI*2);ctx.fill()})}
+ line(meta,'#1769e0');line(won,'#22a060');line(prev,'#7354dc')
+}
+window.addEventListener('resize',drawChart);drawChart();
+
+const gRows=[
+['Janeiro',166667,90000,1,220000,120000,50000,390000,149000,239000,120000,'75%','OK'],
+['Fevereiro',166667,90000,1,240000,130000,70000,440000,174000,264000,130000,'69%','OK'],
+['Março',166667,100000,1,260000,150000,90000,500000,207000,307000,140000,'71%','OK'],
+['Abril',166667,110000,2,270000,160000,100000,530000,224000,334000,150000,'73%','OK'],
+['Maio',166667,110000,2,280000,170000,110000,560000,239000,349000,160000,'69%','OK'],
+['Junho',166667,120000,2,300000,190000,120000,610000,269000,389000,180000,'67%','OK'],
+['Julho',166667,100000,1,320000,210000,140000,670000,309000,409000,170000,'59%','OK'],
+['Agosto',166667,92000,1,300000,250000,200000,750000,365000,457000,180000,'51%','OK']];
+$('gestaoRows').innerHTML=gRows.map(r=>`<tr>${r.map((v,i)=>`<td>${i>=1&&i<=10&&typeof v==='number'?(i===3?v:'R$ '+v.toLocaleString('pt-BR')):(i===12?'<span class="badge greenbadge">'+v+'</span>':v)}</td>`).join('')}</tr>`).join('');
+
+const tecMonths=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro','Jan (ano+1)','Fev (ano+1)','Mar (ano+1)','Abr (ano+1)','Mai (ano+1)','Jun (ano+1)','Jul (ano+1)','Ago (ano+1)','Set (ano+1)','Out (ano+1)','Nov (ano+1)','Dez (ano+1)'];
+$('tecRows').innerHTML=tecMonths.map((m,i)=>`<tr><td>${i<12?i+1:''}</td><td>${i===0?'1':i===1?'0,5':i===2?'0':''}</td><td>${m}</td><td>${i===0?'Sim':i===1?'Não':''}</td></tr>`).join('');
+
+function addPlan(){const p=prompt('Compromisso de prospects:','70');if(!p)return;const o=prompt('Compromisso de oportunidades:','14');$('planRows').insertAdjacentHTML('beforeend',`<tr><td>Eduardo Caliman</td><td>Agosto</td><td>${p}</td><td>0</td><td>${o||0}</td><td>0</td><td><span class="badge yellow">Pendente</span></td></tr>`)}
+function addTicket(){const nome=prompt('Linha de negócio:');if(!nome)return;const val=Number(prompt('Ticket médio:','50000'))||0;const id='LIN-'+String($('ticketRows').children.length+1).padStart(2,'0');$('ticketRows').insertAdjacentHTML('beforeend',`<tr><td>${id}</td><td>${nome}</td><td>R$ ${val.toLocaleString('pt-BR')}</td><td><span class="badge greenbadge">OK</span></td></tr>`)}
 </script>
-</body></html>
+</body>
+</html>
