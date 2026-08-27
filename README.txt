@@ -7,3 +7,4 @@ PROTÓTIPO GOVERNANÇA COMERCIAL
 5. Próxima fase recomendada: GitHub Pages -> Google Apps Script -> Google Sheets no Drive.
 
 O arquivo appscript.gs é o esqueleto inicial do backend para a próxima etapa.
+Atualização de publicação
